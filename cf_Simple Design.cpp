@@ -19,12 +19,17 @@ o=o+a[l];
 u/=10;
 
 }
-if(o%k==0){    cout<<x<<"\n";  }
-else if( 9*l-o>=0){
+v=o/k;
+v++;
+v=v*k;
+if(x<k){ cout<<k<<"\n";   }
+else if(o%k==0){    cout<<x<<"\n";  }
+else if( 9*l-v>=0){
 p=0;
-while(o>0){
-if(9-a[p]>=o){  a[p]+=o;    o=0;  }
-else{   o-=9-a[p] ; a[p]=9;  }
+v=v-o;
+while(v>0){
+if(9-a[p]>=v){  a[p]+=v;    v=0;  }
+else{   v-=9-a[p] ; a[p]=9;  }
 p++;
 }
 for(i=l-1;i>=0;i--){ cout<<a[i];   } cout<<"\n";
